@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="ru.anb.testunisafe.fiatures.startfragment.ui.StartFragment"
+        android:name="ru.anb.testunisafe.fiatures.start.ui.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="ru.anb.testunisafe.fiatures.listfragment.ListFragment"
+        android:name="ru.anb.testunisafe.fiatures.list.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" />
 </navigation>
