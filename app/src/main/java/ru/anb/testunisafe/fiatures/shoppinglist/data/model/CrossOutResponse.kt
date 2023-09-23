@@ -1,4 +1,4 @@
-package ru.anb.testunisafe.fiatures.list.data.model
+package ru.anb.testunisafe.fiatures.shoppinglist.data.model
 
 
 import com.google.gson.annotations.SerializedName

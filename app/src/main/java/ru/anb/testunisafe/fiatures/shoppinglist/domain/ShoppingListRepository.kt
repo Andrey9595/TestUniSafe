@@ -1,13 +1,10 @@
 package ru.anb.testunisafe.fiatures.shoppinglist.domain
 
-import retrofit2.http.GET
-import retrofit2.http.Query
-import ru.anb.testunisafe.core.domain.LoadState
-
 interface ShoppingListRepository {
 
+    suspend fun addToShoppingList(id: Int, name: String, count: Int): LoadStateShoppingList
 
-    suspend fun addToShoppingList(id: Int): LoadState
+    suspend fun crossItOff(listId: Int, itemId: Int): LoadStateShoppingList
 
-    suspend fun crossItOff(id: Int): LoadState
+    suspend fun getShoppingList(ListId: Int): LoadStateShoppingList
 }

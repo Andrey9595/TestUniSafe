@@ -6,15 +6,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fiatures.shoppinglist.ui.ShoppingListFragment">
 
+    <EditText
+        android:id="@+id/addNAme_shoppingList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/new_shop_list"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/add_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="count"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/add_soppingList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_soppingList"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_check_24"
+        app:layout_constraintBottom_toBottomOf="@+id/addNAme_shoppingList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addNAme_shoppingList" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_shopping_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/shopping_list" />
+        app:layout_constraintTop_toBottomOf="@+id/addNAme_shoppingList"
+        tools:listitem="@layout/item_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

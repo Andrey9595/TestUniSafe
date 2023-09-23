@@ -21,4 +21,5 @@ interface LoadState {
 
     class DeleteList(override val data: RemoveListResponse) : Success<RemoveListResponse>(data)
 
+
 }
