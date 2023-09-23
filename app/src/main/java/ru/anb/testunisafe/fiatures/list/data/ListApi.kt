@@ -13,8 +13,8 @@ interface ListApi {
     suspend fun getAllMyShopLists(@Query("key") key: String): Response<AllShopListResponse>
 
     @GET("CreateShoppingList")
-    suspend fun createShoppingList(@Query("key") key: String): Response<CreateShopListResponse>
+    suspend fun createShoppingList(@Query("key") key: String, @Query("name") name: String): Response<CreateShopListResponse>
 
     @GET("RemoveShoppingList")
-    suspend fun removeShoppingList(@Query("item_id") itemId: Int): Response<RemoveListResponse>
+    suspend fun removeShoppingList(@Query("list_id") listId: Int): Response<RemoveListResponse>
 }

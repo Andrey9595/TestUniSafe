@@ -23,9 +23,9 @@ class ListViewModel @Inject constructor(private val listRepository: ListReposito
         }
     }
 
-    fun createShoppingList() {
+    fun createShoppingList(name: String) {
         viewModelScope.launch {
-            val result = listRepository.createShoppingList()
+            val result = listRepository.createShoppingList(name)
             _listState.value = result
         }
     }

@@ -18,5 +18,14 @@
         android:id="@+id/listFragment"
         android:name="ru.anb.testunisafe.fiatures.list.ui.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="ru.anb.testunisafe.fiatures.shoppinglist.ui.ShoppingListFragment"
+        android:label="fragment_shoping_list"
+        tools:layout="@layout/fragment_shoping_list" />
 </navigation>

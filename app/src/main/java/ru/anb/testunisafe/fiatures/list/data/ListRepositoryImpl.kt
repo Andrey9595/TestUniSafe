@@ -18,9 +18,9 @@ class ListRepositoryImpl @Inject constructor(
         } else LoadState.Error(R.string.eror)
     }
 
-    override suspend fun createShoppingList(): LoadState {
+    override suspend fun createShoppingList(name: String): LoadState {
         val token = persistentStore.getToken() ?: return LoadState.Error(R.string.not_authorized)
-        val result = listApi.createShoppingList(token)
+        val result = listApi.createShoppingList(token, name)
         return if (result.isSuccessful && result.body() != null) {
             LoadState.ListCreated(result.body()!!)
         } else LoadState.Error(R.string.eror)
