@@ -1,6 +1,9 @@
 package ru.anb.testunisafe.core.domain
 
 import androidx.annotation.StringRes
+import ru.anb.testunisafe.fiatures.list.data.model.AllShopListResponse
+import ru.anb.testunisafe.fiatures.list.data.model.CreateShopListResponse
+import ru.anb.testunisafe.fiatures.list.data.model.RemoveListResponse
 
 interface LoadState {
 
@@ -12,8 +15,10 @@ interface LoadState {
 
     class NotLoadedYet : LoadState
 
-    class UserIsExist<T>(override val data: T) : Success<T>(data)
+    class ListCreated(override val data: CreateShopListResponse) : Success<CreateShopListResponse>(data)
 
-    class UserIsMotExist<T>(override val data: T) : Success<T>(data)
+    class AllLists(override val data: AllShopListResponse) : Success<AllShopListResponse>(data)
+
+    class DeleteList(override val data: RemoveListResponse) : Success<RemoveListResponse>(data)
 
 }

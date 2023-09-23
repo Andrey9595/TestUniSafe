@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="ru.anb.testunisafe.fiatures.list.ListFragment"
+        android:name="ru.anb.testunisafe.fiatures.list.ui.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" />
 </navigation>

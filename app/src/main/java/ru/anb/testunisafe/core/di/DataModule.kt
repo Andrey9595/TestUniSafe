@@ -1,4 +1,4 @@
-package ru.anb.testunisafe.fiatures.start.di
+package ru.anb.testunisafe.core.di
 
 import android.content.Context
 import androidx.datastore.core.DataStore

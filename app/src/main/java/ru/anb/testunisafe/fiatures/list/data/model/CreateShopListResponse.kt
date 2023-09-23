@@ -3,7 +3,7 @@ package ru.anb.testunisafe.fiatures.list.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class CreateShopResponse(
+data class CreateShopListResponse(
     @SerializedName("list_id")
     val listId: Int,
     @SerializedName("success")

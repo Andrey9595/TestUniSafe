@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class AllShopListResponse(
     @SerializedName("shop_list")
-    val shopList: List<ShopListDto>,
+    val shopList: List<ShopList>,
     @SerializedName("success")
     val success: Boolean
 )

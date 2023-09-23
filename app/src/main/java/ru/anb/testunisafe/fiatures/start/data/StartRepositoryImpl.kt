@@ -1,7 +1,7 @@
 package ru.anb.testunisafe.fiatures.start.data
 
-import androidx.datastore.core.DataStore
 import ru.anb.testunisafe.R
+import ru.anb.testunisafe.core.data.PersistentStore
 import ru.anb.testunisafe.core.domain.LoadState
 import ru.anb.testunisafe.fiatures.start.domain.StartRepository
 import javax.inject.Inject

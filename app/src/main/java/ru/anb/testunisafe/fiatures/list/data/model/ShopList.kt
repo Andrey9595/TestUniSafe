@@ -3,7 +3,7 @@ package ru.anb.testunisafe.fiatures.list.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ShopListDto(
+data class ShopList(
     @SerializedName("created")
     val created: String,
     @SerializedName("id")

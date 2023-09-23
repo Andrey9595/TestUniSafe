@@ -1,10 +1,9 @@
-package ru.anb.testunisafe.fiatures.start.data
+package ru.anb.testunisafe.core.data
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 class PersistentStoreImpl @Inject constructor(private val dataStore: DataStore<Preferences>) :
@@ -18,5 +17,9 @@ class PersistentStoreImpl @Inject constructor(private val dataStore: DataStore<P
 
     override suspend fun isAuthorized(): Boolean {
         return  dataStore.edit {  }.contains(tokenKay)
+    }
+
+    override suspend fun getToken(): String? {
+        return dataStore.edit {  }[tokenKay]
     }
 }
