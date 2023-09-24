@@ -33,4 +33,11 @@ class ShoppingListRepositoryImpl @Inject constructor(
             LoadStateShoppingList.GetShoppingList(result.body()!!)
         else LoadStateShoppingList.Error(R.string.eror)
     }
+
+    override suspend fun removeFromList(listId: Int, itemId: Int): LoadStateShoppingList {
+        val result = shoppingListApi.removeFromList(listId, itemId)
+        return if (result.isSuccessful && result.body() != null)
+            LoadStateShoppingList.RemoveFromList(result.body()!!)
+        else LoadStateShoppingList.Error(R.string.eror)
+    }
 }

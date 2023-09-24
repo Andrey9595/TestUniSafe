@@ -25,13 +25,22 @@
         app:layout_constraintTop_toBottomOf="@id/name_list_shopping"
         tools:text="Count" />
 
-
     <ImageView
         android:id="@+id/remove"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="16dp"
         android:src="@drawable/baseline_close_24"
+        app:layout_constraintBottom_toBottomOf="@+id/count"
+        app:layout_constraintEnd_toStartOf="@id/cross_off"
+        app:layout_constraintTop_toTopOf="@+id/name_list_shopping" />
+
+    <ImageView
+        android:id="@+id/cross_off"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_carpenter_24"
         app:layout_constraintBottom_toBottomOf="@+id/count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/name_list_shopping" />

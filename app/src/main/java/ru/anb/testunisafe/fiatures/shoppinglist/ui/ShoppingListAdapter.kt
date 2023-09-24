@@ -16,14 +16,17 @@ class ShoppingListAdapter(private val shoppingListInteraction: ShoppingListInter
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(shopListItem: ShopListItem) {
-            if (shopListItem.isCrossed){
+            if (shopListItem.isCrossed) {
                 binding.nameListShopping.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+            }
+            binding.remove.setOnClickListener {
+                shoppingListInteraction.remove(shopListItem.id)
             }
 
             binding.nameListShopping.text = shopListItem.name
             binding.count.text =
                 binding.root.context.getString(R.string.count, shopListItem.created)
-            binding.remove.setOnClickListener {
+            binding.crossOff.setOnClickListener {
                 shoppingListInteraction.crossItOff(shopListItem.id)
             }
         }

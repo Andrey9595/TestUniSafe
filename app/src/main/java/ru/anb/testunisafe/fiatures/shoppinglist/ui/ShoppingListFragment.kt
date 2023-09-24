@@ -67,6 +67,7 @@ class ShoppingListFragment : Fragment(), ShoppingListInteraction {
                         is LoadStateShoppingList.GetShoppingList -> adapter.updateShoppingList(it.data.itemList)
                         is LoadStateShoppingList.ToShoppingList -> viewModel.getShoppingList(listId)
                         is LoadStateShoppingList.CrossItOff -> viewModel.getShoppingList(listId)
+                        is LoadStateShoppingList.RemoveFromList -> viewModel.getShoppingList(listId)
                         is LoadStateShoppingList.Error -> Toast.makeText(
                             requireContext(),
                             it.error,
@@ -80,5 +81,9 @@ class ShoppingListFragment : Fragment(), ShoppingListInteraction {
 
     override fun crossItOff(itemId: Int) {
         viewModel.crossItOff(listId, itemId)
+    }
+
+    override fun remove(itemId: Int) {
+        viewModel.removeFromList(listId, itemId)
     }
 }

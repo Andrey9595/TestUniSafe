@@ -39,4 +39,11 @@ class ShoppingListViewModel @Inject constructor(
             _shoppingListState.value = result
         }
     }
+
+    fun removeFromList(listId: Int, itemId: Int) {
+        viewModelScope.launch {
+            val result = shoppingListRepository.removeFromList(listId, itemId)
+            _shoppingListState.value = result
+        }
+    }
 }

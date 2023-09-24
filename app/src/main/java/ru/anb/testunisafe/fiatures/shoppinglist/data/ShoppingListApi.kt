@@ -4,6 +4,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 import ru.anb.testunisafe.fiatures.shoppinglist.data.model.CrossOutResponse
+import ru.anb.testunisafe.fiatures.shoppinglist.data.model.ItemRemoveResponse
 import ru.anb.testunisafe.fiatures.shoppinglist.data.model.ShopListItem
 import ru.anb.testunisafe.fiatures.shoppinglist.data.model.SingleShopListResponse
 
@@ -24,4 +25,11 @@ interface ShoppingListApi {
 
     @GET("GetShoppingList")
     suspend fun getShoppingList(@Query("list_id") listId: Int): Response<SingleShopListResponse>
+
+    @GET("RemoveFromList")
+
+    suspend fun removeFromList(
+        @Query("list_id") listId: Int,
+        @Query("item_id") itemId: Int
+    ) : Response<ItemRemoveResponse>
 }

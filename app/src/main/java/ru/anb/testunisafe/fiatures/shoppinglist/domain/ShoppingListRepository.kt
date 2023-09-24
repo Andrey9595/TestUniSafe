@@ -7,4 +7,6 @@ interface ShoppingListRepository {
     suspend fun crossItOff(listId: Int, itemId: Int): LoadStateShoppingList
 
     suspend fun getShoppingList(ListId: Int): LoadStateShoppingList
+
+    suspend fun removeFromList(listId: Int, itemId: Int): LoadStateShoppingList
 }
