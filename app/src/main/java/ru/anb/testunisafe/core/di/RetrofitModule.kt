@@ -41,6 +41,6 @@ class RetrofitModule {
     }
 
     companion object {
-        const val BASE_URL = "https://cyberprot.ru/shopping/v1/"
+        const val BASE_URL = "https://cyberprot.ru/shopping/v2/"
     }
 }

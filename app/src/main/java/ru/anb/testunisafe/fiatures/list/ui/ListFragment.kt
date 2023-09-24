@@ -82,7 +82,11 @@ class ListFragment : Fragment(), ListInteraction {
     override fun toSingleList(id: Int) {
         findNavController().navigate(
             R.id.action_listFragment_to_shoppingListFragment,
-            bundleOf("Shop_List_Id" to id)
+            bundleOf(LIST_ID_KEY to id)
         )
+    }
+
+    companion object{
+        const val LIST_ID_KEY = "Shop_List_Id"
     }
 }

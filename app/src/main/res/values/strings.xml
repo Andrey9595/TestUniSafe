@@ -7,4 +7,5 @@
     <string name="not_authorized">you do not authorized</string>
     <string name="new_shop_list">New Shop List</string>
     <string name="created">Created: %1$s</string>
+    <string name="count">Count: %1$s</string>
 </resources>

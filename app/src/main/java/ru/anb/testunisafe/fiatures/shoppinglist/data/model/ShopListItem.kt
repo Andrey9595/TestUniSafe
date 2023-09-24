@@ -9,5 +9,8 @@ data class ShopListItem(
     @SerializedName("id")
     val id: Int,
     @SerializedName("name")
-    val name: String
+    val name: String,
+    @SerializedName("is_crossed")
+    val isCrossed: Boolean
+
 )

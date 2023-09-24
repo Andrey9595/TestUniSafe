@@ -13,7 +13,7 @@ interface ShoppingListApi {
     suspend fun addToShoppingList(
         @Query("id") id: Int,
         @Query("value") name: String,
-        @Query("n") count: Int
+        @Query("n") count: String
     ): Response<ShopListItem>
 
     @GET("CrossItOff")

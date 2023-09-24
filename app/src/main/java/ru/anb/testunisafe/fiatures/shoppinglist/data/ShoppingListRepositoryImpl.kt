@@ -12,7 +12,7 @@ class ShoppingListRepositoryImpl @Inject constructor(
     override suspend fun addToShoppingList(
         id: Int,
         name: String,
-        count: Int
+        count: String
     ): LoadStateShoppingList {
         val result = shoppingListApi.addToShoppingList(id, name, count)
         return if (result.isSuccessful && result.body() != null)
